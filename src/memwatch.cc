@@ -114,8 +114,8 @@ static void AsyncMemwatchAfter(uv_work_t* request) {
 
             s_stats.consecutive_growth++;
 
-            // consecutive growth over 5 GCs suggests a leak
-            if (s_stats.consecutive_growth >= 5) {
+            // consecutive growth over 7 GCs suggests a leak
+            if (s_stats.consecutive_growth >= 7) {
                 // reset to zero
                 s_stats.consecutive_growth = 0;
 
