@@ -79,7 +79,7 @@ static Local<Value> getLeakReport(size_t heapUsage)
     leakReport->Set(Nan::New("growth").ToLocalChecked(), Nan::New<v8::Number>(growth));
 
     std::stringstream ss;
-    ss << "heap growth over 5 consecutive GCs ("
+    ss << "heap growth over 7 consecutive GCs ("
        << mw_util::niceDelta(delta) << ") - "
        << mw_util::niceSize(growth / ((double) delta / (60.0 * 60.0))) << "/hr";
 
